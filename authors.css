@@ -1,0 +1,220 @@
+@import url("https://fonts.cdnfonts.com/css/death-star");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Death Star", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(assets/starsbg.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  animation: change 70s infinite ease-in-out;
+  padding:80px;
+}
+
+/* Navbar */
+@keyframes change {
+  0% {
+    background-image: url(char/bg1.jpg);
+  }
+  10% {
+    background-image: url(char/bg2.jpg);
+  }
+  20% {
+    background-image: url(char/bg3.jpg);
+  }
+  30% {
+    background-image: url(char/bg4.jpg);
+  }
+  40% {
+    background-image: url(char/bg5.jpg);
+  }
+  50% {
+    background-image: url(char/bg6.jpg);
+  }
+  60% {
+    background-image: url(char/bg7.jpg);
+  }
+  70% {
+    background-image: url(char/bg8.jpg);
+  }
+  80% {
+    background-image: url(assets/shot10.jpg);
+  }
+  90% {
+    background-image: url(assets/shot11.jpeg);
+  }
+  100% {
+    background-image: url(assets/shot12.jpg);
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 3px solid #ffe81f;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.header:hover::after {
+  left: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #ffe81f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 1rem;
+  color: #ffe81f;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+.navbar a.active {
+  font-size: 1.5rem;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #ffe81f;
+  font-weight: bold;
+}
+
+#check {
+  display: none;
+}
+
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #ffe81f;
+  cursor: pointer;
+  display: none;
+}
+
+.authors-section {
+  margin-top: 20px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.authors-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.authors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.author-card {
+  background: #0d0d0d;
+  border: 2px solid #f0db4f;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(240, 219, 79, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.author-card:hover {
+  transform: translateY(-10px);
+}
+
+.author-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #f0db4f;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 1.5rem;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #f0db4f;
+  margin-bottom: 10px;
+}
+
+.author-bio {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  color:white;
+}
+
+.video-section {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 1.8rem;
+  color: #f0db4f;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border: 3px solid #f0db4f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

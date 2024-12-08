@@ -1,0 +1,285 @@
+@import url('https://fonts.cdnfonts.com/css/death-star');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Death Star', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: url(assets/starsbg.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    animation: change 70s infinite ease-in-out;
+    padding-top: 80px;
+}
+
+/*navbar*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 3px solid #ffe81f; 
+}
+
+.header::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+.header::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    transition: .5s;
+}
+
+.header:hover::after{
+    left:100%;
+}
+
+.logo{
+    font-size: 2rem;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #ffe81f;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #ffe81f;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+.navbar a.active {
+    font-size: 1.5rem;
+    color: transparent;  
+    -webkit-text-stroke: 0.5px #ffe81f;
+    font-weight: bold; 
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position:absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #ffe81f;
+    cursor:pointer;
+    display: none;
+}
+
+
+/* Lightsabers Section */
+
+.lightsabers h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    -webkit-text-stroke: 0.5px #fff;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 25px #ffff0c, 0 0 5px #ffe81f;
+}
+
+.lightsabers p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.333), transparent);
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color:#ffe81f;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 25px #010100, 0 0 5px #ffe81f;
+}
+
+
+.lightsaber-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+.lightsaber-list h3{
+    color: #000;
+    -webkit-text-stroke: 0.5px #fff;
+    margin-bottom: 1rem;
+
+}
+
+.card {
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.card img:hover {
+    transform: scale(1.5);
+}
+.card::after {
+    content:'';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(#fff, #ffe81f, #ff9f00, #000, #ff9f00,#ffe81f,#fff );
+    border-radius: 10px;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+}
+
+.card img {
+    width: 180px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+
+.slider {
+    margin: 2rem auto;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider h2{
+    color: #000;
+    -webkit-text-stroke: 0.5px #ffe81f;
+    margin-bottom: 1rem;
+    
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.985);
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slider-item::after {
+    content:'';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(#fff, #ffe81f, #ff9f00, #000, #ff9f00,#ffe81f,#fff );
+    border-radius: 10px;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+}
+
+.slider-item img {
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 2rem;
+}
+
+.slider-item h3 {
+    color: #000;
+    -webkit-text-stroke: 0.5px #fff;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.slider-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.slider-controls button {
+    background: #ffe81f;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.slider-controls button:hover {
+    background: #ffffff;
+    color: #000;}
+
+    /* Media Queries for Small Screens */
+@media (max-width: 768px) {
+    .slider-item {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .slider-item img {
+        margin: 0 0 1rem 0;
+        max-width: 200px; 
+    }
+
+    .slider-item h3 {
+        font-size: 1.2rem; 
+    }
+
+    .slider-item p {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-item img {
+        max-width: 150px; 
+    }
+
+    .slider-item h3 {
+        font-size: 1rem; 
+    }
+
+    .slider-item p {
+        font-size: 0.8rem; 
+    }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Universe</title>
+    <link rel="stylesheet" href="char.css">
+    <link rel="stylesheet" href="media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Star Wars</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="intro.html" style="--i:0;">Introduction</a>
+            <a href="index.html" style="--i:1;">Home</a>
+            <a href="mov.html" style="--i:2;">Movies</a>
+            <a href="characters.html" style="--i:3;">Characters</a>
+            <a href="planets.html" style="--i:4;">Planets</a>
+            <a href="lightsabers.html" style="--i:5;">Lightsabers</a>
+            <a href="authors.html" style="--i:6;">Authors</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <section class="filter-buttons">
+            <button class="filter-btn" data-category="all">All</button>
+            <button class="filter-btn" data-category="empire">Empire Characters</button>
+            <button class="filter-btn" data-category="rebel">Rebel Characters</button>
+            <button class="filter-btn" data-category="bots">Bots</button>
+        </section>
+
+        <section class="characters">
+            <!-- Rebel Characters -->
+            <div class="character-card" data-category="rebel">
+                <img src="char/lukeskywalker.jpg" alt="Luke Skywalker">
+                <h3>Luke Skywalker</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/princessleia.jpg" alt="Leia Organa">
+                <h3>Leia Organa</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/hansolo.jpg" alt="Han Solo">
+                <h3>Han Solo</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/chewbacca.jpg" alt="Chewbacca">
+                <h3>Chewbacca</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/obiwan.jpg" alt="Obi-Wan Kenobi">
+                <h3>Obi-Wan Kenobi</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/monmothma.jpg" alt="Mon Mothma">
+                <h3>Mon Mothma</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/landocalrissian.jpg" alt="Lando Calrissian">
+                <h3>Lando Calrissian</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/jynerso.jpg" alt="Jyn Erso">
+                <h3>Jyn Erso</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/cassianandor.jpg" alt="Cassian Andor">
+                <h3>Cassian Andor</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/wedgeantilles.jpg" alt="Wedge Antilles ">
+                <h3>Wedge Antilles </h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/ahsokatano.jpg" alt="Ahsoka Tano">
+                <h3>Ahsoka Tano</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/rey.jpg" alt="Rey">
+                <h3>Rey</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/poedameron.jpg" alt="Poe Dameron">
+                <h3>Poe Dameron</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/yoda.jpg" alt="Yoda">
+                <h3>Yoda</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/macewindu.jpg" alt="Windu">
+                <h3>Mace Windu</h3>
+            </div>
+            <div class="character-card" data-category="rebel">
+                <img src="char/quigon.jpg" alt="Qui-Gon Jinn">
+                <h3>Qui-Gon Jinn</h3>
+            </div>
+
+            <!-- Empire Characters -->
+            <div class="character-card" data-category="empire">
+                <img src="char/vader.jpg" alt="Darth Vader">
+                <h3>Darth Vader</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/kyloren (1).jpg" alt="Kylo Ren">
+                <h3>Kylo Ren</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/palpatine.jpeg" alt="Emperor Palpatine">
+                <h3>Emperor Palpatine</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/grandmoff.jpg" alt="Grand Moff Tarkin">
+                <h3>Grand Moff Tarkin</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/darthmaul.jpg" alt="Darth Maul">
+                <h3>Darth Maul</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/bobafett.jpg" alt="Boba Fett">
+                <h3>Boba Fett</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/admiralpiett.jpg" alt="Admiral Piett">
+                <h3>Admiral Piett</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/storm.jpg" alt="Stormtroopers">
+                <h3>Stormtroopers</h3>
+            </div>
+            <div class="character-card" data-category="empire">
+                <img src="char/countdooku.jpg" alt="Count Dooku">
+                <h3>Count Dooku</h3>
+            </div>
+            
+
+            <!-- Bots -->
+            <div class="character-card" data-category="bots">
+                <img src="char/r2d2.jpeg" alt="R2-D2">
+                <h3>R2-D2</h3>
+            </div>
+            <div class="character-card" data-category="bots">
+                <img src="char/c3po.jpeg" alt="C-3PO">
+                <h3>C-3PO</h3>
+            </div>
+            <div class="character-card" data-category="bots">
+                <img src="char/1bb8.jpg" alt="BB-8">
+                <h3>BB-8</h3>
+            </div>
+            <div class="character-card" data-category="bots">
+                <img src="char/K2SO.jpg" alt="K-2SO">
+                <h3>K-2SO</h3>
+            </div>
+            <div class="character-card" data-category="bots">
+                <img src="char/R4-P17.png" alt="R4-P17">
+                <h3>R4-P17</h3>
+            </div>
+            <div class="character-card" data-category="bots">
+                <img src="char/chop.jpeg" alt="Chopper ">
+                <h3>Chopper </h3>
+            </div>
+            <div class="character-card" data-category="bots">
+                <img src="char/generalgrievous.jpg" alt="General Grievous">
+                <h3>General Grievous</h3>
+            </div>
+        </section>
+        
+        <div class="character-details" id="character-details">
+            <button class="close-btn" id="close-btn">X</button>
+            <div class="details-content">
+            </div>
+        </div>
+
+    </main>
+
+    <script src="char.js"></script>
+    <script src="mov.js"></script>
+    <script>
+        // JavaScript to add 'active' class to current page link
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll(".navbar a");
+            const currentPath = window.location.pathname; // Get the current URL path
+
+            navLinks.forEach(link => {
+                if (link.href.includes(currentPath)) {
+                    link.classList.add("active");  // Add the active class to the matching link
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
